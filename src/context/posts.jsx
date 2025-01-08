@@ -23,7 +23,7 @@ export function Provider({ children }) {
   }
 
   const deletePostbyId = async (id) => {
-    await axios.delete(`URL/${id}`)
+    await axios.delete(`${URL}/${id}`)
 
     const updatedPosts = posts.filter((post) => {
       return post.id !== id;
@@ -32,7 +32,7 @@ export function Provider({ children }) {
   }
 
   const editPostbyId = async (id, newAuthor, newQuote) => {
-    const response = await axios.put(`URL/${id}`, {
+    const response = await axios.put(`${URL}/${id}`, {
       author: newAuthor,
       quote: newQuote
     })
