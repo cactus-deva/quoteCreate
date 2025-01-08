@@ -5,15 +5,15 @@ export const PostContext = createContext();
 
 export function Provider({ children }) {
   const [posts, setPosts] = useState([])
+  const URL = "http://localhost:3002/posts"
 
   const fetchPosts = async () => {
-    const response = await axios.get("http://localhost:3001/posts");
+    const response = await axios.get(URL);
     setPosts(response.data)
-    
   }
 
   const createPost = async (author, quote) => {
-    const response = await axios.post("http://localhost:3001/posts",
+    const response = await axios.post(URL,
       { author, quote }
     )
     const updatePosts = [
@@ -23,7 +23,7 @@ export function Provider({ children }) {
   }
 
   const deletePostbyId = async (id) => {
-    await axios.delete(`http://localhost:3001/posts/${id}`)
+    await axios.delete(`URL/${id}`)
 
     const updatedPosts = posts.filter((post) => {
       return post.id !== id;
@@ -32,7 +32,7 @@ export function Provider({ children }) {
   }
 
   const editPostbyId = async (id, newAuthor, newQuote) => {
-    const response = await axios.put(`http://localhost:3001/posts/${id}`, {
+    const response = await axios.put(`URL/${id}`, {
       author: newAuthor,
       quote: newQuote
     })

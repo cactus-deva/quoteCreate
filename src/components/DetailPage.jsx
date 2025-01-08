@@ -13,7 +13,6 @@ export default function DetailPage() {
 
     useEffect(() => {
         fetchPosts()
-
     }, [])
 
     const showPostPage =
@@ -23,7 +22,6 @@ export default function DetailPage() {
                     <h1>{post.quote}</h1>
                     <h1>----{post.author !== "" ? post.author : "Anonymous"}----</h1>
                 </div>
-
             </div>
             :
             <div className="font-show flex flex-col items-center justify-center h-[100vh] text-[70px] bg-cover">
