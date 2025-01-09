@@ -23,8 +23,9 @@ export default function PostEdit({ post, onSubmit }) {
 
     }
     return (
-        <form onSubmit={handleSubmit}>
-            <div className="flex flex-col justify-between h-[100px] rounded-md pl-1 text-[black] text-[15px]">
+
+        <div className="flex flex-col justify-between h-[100px] rounded-md pl-1 text-[black] text-[15px]">
+            <form onSubmit={handleSubmit}>
                 <div className="flex items-start m-1 h-[50px]">
                     <label>Quotes</label>
                     <textarea type="text" maxLength="50" value={quote} onChange={handleChangeQuote} className="ml-2 pl-1 h-[50px] w-[400px] rounded-md" />
@@ -33,8 +34,12 @@ export default function PostEdit({ post, onSubmit }) {
                     <label>Author</label>
                     <input type="text" maxLength="20" value={author} onChange={handleChangeAuthor} className="ml-2 pl-1 w-[400px] rounded-md" />
                 </div>
-                <button className="bg-[#d5dfd5] w-20 h-7 rounded-md mt-3 hover:bg-[#e4e1db]">Save</button>
-            </div>
-        </form>
+                <div className="flex justify-center bg-white hover:bg-indigo-400 w-[100px] h-[30px] rounded-md mt-3">
+                    <button>Save</button>
+                </div>
+
+            </form>
+        </div>
+
     )
 }

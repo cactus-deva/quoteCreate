@@ -9,7 +9,6 @@ export default function DetailPage() {
     const { id } = useParams()
 
     const post = posts.find((p) => p.id === parseInt(id))
-    const background = `https://picsum.photos/600/300?random=${id}`
 
     useEffect(() => {
         fetchPosts()
@@ -30,9 +29,9 @@ export default function DetailPage() {
 
 
     return (
-        <div className="box-border flex flex-col h-[100vh]" style={{ backgroundImage: `url(${background})`, backgroundSize: 'cover' }}>
+        <div className={`box-border flex flex-col h-[100vh] ${isDarkMode ? "text-darkText text-[20px] bg-gray-700":"text-white text-[20px] bg-indigo-800"}`}>
             <Link to="/" className="m-3">
-                <button className="bg-transparent hover:bg-white p-1 rounded-md border-2">Back to Home</button>
+                <button className="bg-transparent hover:bg-darkBackground p-1 rounded-md border-2">Back to Home</button>
             </Link>
             {showPostPage}
         </div>

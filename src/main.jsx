@@ -1,4 +1,4 @@
-import { createRoot, ReactDOM } from 'react-dom/client'
+import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './index.css'
 import App from './App'
@@ -6,6 +6,8 @@ import DetailPage from './components/DetailPage'
 import { Provider } from './context/posts'
 import RandomQuotePage from './components/RandomQuotePage'
 import { DarkModeProvider } from './context/darkModeTheme'
+import ConfirmDelete from './components/ConfirmDelete'
+import PostList from './components/PostList'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,10 @@ const router = createBrowserRouter([
   {
     path: "/RandomQuotePage",
     element: <RandomQuotePage />
+  },
+  {
+    path: "/ConfirmDelete",
+    element: <ConfirmDelete />
   }
 
 ]);

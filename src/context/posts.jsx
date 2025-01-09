@@ -5,12 +5,17 @@ export const PostContext = createContext();
 
 export function Provider({ children }) {
   const [posts, setPosts] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
   const URL = "http://localhost:3002/posts"
 
   const fetchPosts = async () => {
     const response = await axios.get(URL);
-    setPosts(response.data)
-  }
+    setTimeout(() => {
+      setPosts(response.data)
+      setIsLoading(false)
+    }, 2000); 
+  }  
 
   const createPost = async (author, quote) => {
     const response = await axios.post(URL,
@@ -51,10 +56,12 @@ export function Provider({ children }) {
     <PostContext.Provider value={
       {
         posts,
+        setPosts,
         deletePostbyId,
         editPostbyId,
         createPost,
-        fetchPosts
+        fetchPosts,
+        isLoading
       }
     }>
       {children}

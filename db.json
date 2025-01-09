@@ -1,17 +1,7 @@
 {
   "posts": [
     {
-      "author": "",
-      "quote": "Java is to JavaScript as ham is to hamster.",
-      "id": 1
-    },
-    {
-      "author": "Mark J.",
-      "quote": "Q: Where developers wash their hands?\n\nA: in async",
-      "id": 2
-    },
-    {
-      "author": "Ron Jeffries",
+      "author": "Ron Jeffrey",
       "quote": "Code never lies, comments sometimes do",
       "id": 3
     },
@@ -29,6 +19,11 @@
       "author": "Casey Patton",
       "quote": "Programming is thinking, not typing.",
       "id": 6
+    },
+    {
+      "author": "Toddler",
+      "quote": "I wash my hands in async",
+      "id": 8
     }
   ]
 }

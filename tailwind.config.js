@@ -11,7 +11,7 @@ export default {
         darkBackground: 'black',
         lightText: 'black',
         darkText: 'white',
-      }
+      },
     },
   },
   plugins: [],

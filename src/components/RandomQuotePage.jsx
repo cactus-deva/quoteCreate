@@ -15,22 +15,22 @@ export default function RandomQuotePage() {
             console.log("Data not found >> ", error);
         }
     }
-    
-    
+
     useEffect(() => {
         fetchData()
         const interval = setInterval(() => {
             fetchData()
-        }, 4000);
+        }, 6000);
 
         return () => clearInterval(interval)
     }, [])
 
     return (
-        <div className={`p-4 h-full ${isDarkMode ? "bg-gradient-to-r from-darkBackground to-lightBackground" : "bg-gradient-to-r from-slate-900 to-indigo-500"}`}>
-            <Link to="/" className={`bg-indigo-500 hover:bg-slate-600 rounded-md p-2 m-3 text-lightText ${isDarkMode ? "bg-lightBackground" : "bg-indigo-500"}`}>Back to Home</Link>
-            <div className={`flex flex-col items-center justify-center h-screen `}>
-
+        <div className={`flex flex-col h-screen p-4 ${isDarkMode ? "bg-gradient-to-r from-darkBackground to-lightBackground" : "bg-gradient-to-r from-slate-900 to-indigo-500"}`}>
+            <Link to="/" className={`bg-indigo-500 hover:bg-slate-300 w-[200px] text-center rounded-md p-2 m-3 text-lightText ${isDarkMode ? "bg-lightBackground" : "bg-indigo-500"}`}>
+                Back to Home
+            </Link>
+            <div className={`flex flex-col items-center justify-center mt-[200px]`}>
                 <div className={`p-6 max-w-2xl rounded-lg shadow-lg text-center bg-white transition-opacity duration-500`}>
                     <h1 className="text-3xl font-bold">{quote.quote}</h1>
                     <h3 className="mt-2 text-gray-600 text-xl">{quote.author}</h3>
