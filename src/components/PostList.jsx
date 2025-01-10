@@ -20,14 +20,16 @@ export default function PostList(props) {
 
     if (isLoading) {
         return (
-            <div className="grid grid-cols-2 gap-1">
-                {[...Array(6)].map((post, index) => (
+            <div className="grid grid-cols-1">
+                {[...Array(6)].map((_, index) => {
+                    return (
                     <div key={index} className="flex items-center h-[160px] m-3 rounded-md">
                         <SkeletonTheme baseColor="lightblue" highlightColor="indigo">
-                           <Skeleton count={4} height={30} containerClassName="flex-1" /> 
+                           <Skeleton count={5} height={30} containerClassName="flex-1" /> 
                         </SkeletonTheme>
                     </div>
-                ))}
+                )})
+                }
             </div>
         );
     }

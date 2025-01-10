@@ -3,13 +3,13 @@ import { Link } from "react-router-dom"
 export default function Sidebar() {
 
     return (
-        <div className='flex flex-col flex-wrap m-3 justify-between items-center text-[13px] fixed right-14'>
+        <div className='flex flex-col flex-wrap justify-between items-center text-[13px] m-3 fixed'>
             <Link to="/RandomQuotePage">
-                <button className="rounded-2xl text-white font-semibold bg-rose-500 hover:bg-gradient-to-r from-sky-500 to-indigo-500 h-10 w-[190px]">Random Quote</button>
+                <button className="rounded-2xl text-white font-semibold bg-rose-500 hover:bg-gradient-to-r from-sky-500 to-indigo-500 lg:h-10 lg:w-[190px] sm:h-12 sm:w-[100px]">Random Quote</button>
             </Link>
             <div className="flex flex-col items-center mt-2 h-[100px] w-[200px] text-white font-bold">
                 <h1>Follow us:</h1>
-                <div className="flex justify-around w-full">
+                <div className="flex lg:flex-row sm:flex-col justify-around sm:items-center w-full">
                     <a href="https://www.facebook.com/">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path fill="#4267B2" d="M22.676 0H1.324C.593 0 0 .594 0 1.326v21.348C0 23.406.594 24 1.324 24h11.495V14.708h-3.13v-3.628h3.13V8.412c0-3.1 1.89-4.79 4.65-4.79 1.324 0 2.463.1 2.795.143v3.242l-1.917.001c-1.503 0-1.795.715-1.795 1.763v2.312h3.59l-.467 3.628h-3.123V24h6.126c.729 0 1.324-.594 1.324-1.326V1.326C24 .594 23.406 0 22.676 0z" />

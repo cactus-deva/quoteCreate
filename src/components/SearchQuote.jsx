@@ -12,7 +12,7 @@ export default function SearchQuote (props) {
 
     return (
         <form onSubmit={handleSubmit}> 
-            <input value={term} onChange={handleChange} type="text" className="rounded-2xl m-3 h-9 w-30 p-2 border-black-3" placeholder="search quote" />
+            <input value={term} onChange={handleChange} type="text" className="rounded-2xl m-3 lg:h-9 lg:w-[300px] sm:w-[200px] p-2 border-black-3" placeholder="search quote" />
         </form>
     )
 }

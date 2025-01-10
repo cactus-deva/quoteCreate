@@ -7,7 +7,6 @@ import { Provider } from './context/posts'
 import RandomQuotePage from './components/RandomQuotePage'
 import { DarkModeProvider } from './context/darkModeTheme'
 import ConfirmDelete from './components/ConfirmDelete'
-import PostList from './components/PostList'
 
 const router = createBrowserRouter([
   {
@@ -32,9 +31,9 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <>
     <Provider>
-      <DarkModeProvider>
-        <RouterProvider router={router} />
-      </DarkModeProvider>
+        <DarkModeProvider>
+          <RouterProvider router={router} />
+        </DarkModeProvider>
     </Provider>
   </>
 

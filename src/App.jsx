@@ -12,10 +12,8 @@ function App() {
   const { isDarkMode, toggleDarkMode } = useContext(DarkModeContext)
   const { fetchPosts } = useContext(PostContext)
   const [term, setTerm] = useState("")
-
-  const handleSubmit = (term) => {
-    setTerm(term)
-  }
+  const handleSubmit = (term) => setTerm(term)
+  
 
   useEffect(() => {
     fetchPosts()
@@ -39,12 +37,11 @@ function App() {
         </div>
         <PostCreate />
       </div>
-
-      <div className='grid grid-cols-5 m-2'>
-        <div className='col-span-4'>
+      <div className='grid grid-cols-6 m-2'>
+        <div className='col-span-5'>
           <PostList term={term} />
         </div>
-        <div className='col-span-1 relative'>
+        <div className='col-span-1'>
           <Sidebar />
         </div>
       </div>

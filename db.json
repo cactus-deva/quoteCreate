@@ -2,7 +2,7 @@
   "posts": [
     {
       "author": "Ron Jeffrey",
-      "quote": "Code never lies, comments sometimes do",
+      "quote": "Code never lies, comments did.",
       "id": 3
     },
     {
@@ -24,6 +24,11 @@
       "author": "Toddler",
       "quote": "I wash my hands in async",
       "id": 8
+    },
+    {
+      "author": "๋Jenkins",
+      "quote": "The best code is no code at all.",
+      "id": 9
     }
   ]
 }

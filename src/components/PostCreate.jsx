@@ -29,11 +29,11 @@ export default function PostCreate() {
             <form onSubmit={handleSubmit}>
                 <div className="flex items-start mb-2">
                     <label className="mr-2">Quotes</label>
-                    <textarea type="text" maxLength="50" placeholder="Type maximum 50 letters" className="text-black p-2 rounded-md h-[70px] w-[400px]" value={quote} onChange={handleChangeQuote} required />
+                    <textarea type="text" maxLength="50" placeholder="Type maximum 50 letters" className="text-black p-2 rounded-md h-[70px] lg:w-[400px] sm:w-[300px]" value={quote} onChange={handleChangeQuote} required />
                 </div>
                 <div className="flex items-start mb-2">
                     <label className="mr-2">Author</label>
-                    <input type="text" maxLength="20" placeholder="Your name" className=" text-black p-2 rounded-md w-[400px] h-[30px]" value={author} onChange={handleChangeAuthor} />
+                    <input type="text" maxLength="20" placeholder="Your name" className=" text-black p-2 rounded-md h-[30px] lg:w-[400px] sm:w-[300px]" value={author} onChange={handleChangeAuthor} />
                 </div>
                 <div className="flex justify-center ml-[60px]">
                      <button className="bg-[white] text-slate-700 w-[100px] h-[24px] rounded-lg hover:bg-gradient-to-r from-violet-500 to-fuchsia-500">Submit</button>
