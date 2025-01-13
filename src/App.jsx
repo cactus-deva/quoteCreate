@@ -6,6 +6,7 @@ import { PostContext } from './context/posts';
 import { DarkModeContext } from './context/darkModeTheme';
 import Sidebar from './components/Sidebar';
 import SearchQuote from './components/SearchQuote';
+import { render } from 'react-dom';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
 
   useEffect(() => {
     fetchPosts()
+
   }, [])
 
   return (

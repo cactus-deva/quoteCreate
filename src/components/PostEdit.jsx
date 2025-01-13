@@ -4,7 +4,6 @@ import { PostContext } from "../context/posts"
 export default function PostEdit({ post, onSubmit }) {
 
     const { editPostbyId } = useContext(PostContext)
-
     const [author, setAuthor] = useState(post.author)
     const [quote, setQuote] = useState(post.quote)
 
@@ -20,10 +19,9 @@ export default function PostEdit({ post, onSubmit }) {
         e.preventDefault();
         onSubmit();
         editPostbyId(post.id, author, quote)
-
     }
+    
     return (
-
         <div className="flex flex-col justify-between h-[100px] rounded-md pl-1 text-[black] text-[15px]">
             <form onSubmit={handleSubmit}>
                 <div className="flex items-start m-1 h-[50px]">
@@ -34,10 +32,9 @@ export default function PostEdit({ post, onSubmit }) {
                     <label>Author</label>
                     <input type="text" maxLength="20" value={author} onChange={handleChangeAuthor} className="ml-2 pl-1 w-[400px] rounded-md" />
                 </div>
-                <div className="flex justify-center bg-white hover:bg-indigo-400 w-[100px] h-[30px] rounded-md mt-3">
-                    <button>Save</button>
-                </div>
-
+                <button className="flex justify-center items-center bg-white hover:bg-indigo-400 w-[100px] h-[30px] rounded-md mt-3">
+                    Save
+                </button>
             </form>
         </div>
 

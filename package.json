@@ -8,11 +8,9 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "server": "json-server -p 3002 --watch db.json"
+    "server": "json-server -p 3001 --watch db.json"
   },
   "dependencies": {
-    "@splinetool/react-spline": "^4.0.0",
-    "@splinetool/runtime": "^1.9.54",
     "axios": "^1.7.9",
     "json-server": "^0.17.4",
     "react": "^18.3.1",

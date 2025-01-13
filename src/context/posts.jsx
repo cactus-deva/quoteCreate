@@ -7,14 +7,14 @@ export function Provider({ children }) {
   const [posts, setPosts] = useState([])
   const [isLoading, setIsLoading] = useState(true)
 
-  const URL = "http://localhost:3002/posts"
+  const URL = "http://localhost:3001/posts"  
 
   const fetchPosts = async () => {
     const response = await axios.get(URL);
     setTimeout(() => {
       setPosts(response.data)
       setIsLoading(false)
-    }, 2000); 
+    }, 1000); 
   }  
 
   const createPost = async (author, quote) => {

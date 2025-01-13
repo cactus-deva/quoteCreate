@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Sidebar() {
 
     return (
-        <div className='flex flex-col flex-wrap justify-between items-center text-[13px] m-3 fixed'>
+        <div className='flex flex-col flex-wrap justify-between items-center text-[13px] m-3 fixed ml-9'>
             <Link to="/RandomQuotePage">
                 <button className="rounded-2xl text-white font-semibold bg-rose-500 hover:bg-gradient-to-r from-sky-500 to-indigo-500 lg:h-10 lg:w-[190px] sm:h-12 sm:w-[100px]">Random Quote</button>
             </Link>

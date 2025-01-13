@@ -10,7 +10,7 @@ export default function ConfirmDelete(props) {
     const handleDeleteConfirm = () => {
         deletePostbyId(post.id)
     }
-    
+
     return (
         <div className={`flex justify-center items-center m-3 rounded-md h-[160px] ${isDarkMode ? "bg-slate-600 text-black" : "bg-indigo-400 text-lightText"}`}>
             <div className="flex flex-col text-center justify-around h-[80px]">
