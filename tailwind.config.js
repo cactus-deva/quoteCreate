@@ -5,16 +5,8 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        lightBackground: 'white',
-        darkBackground: 'black',
-        lightText: 'black',
-        darkText: 'white',
-      },
-    },
+    extend: {},
   },
   plugins: [],
-  darkMode: 'class',
 }
 

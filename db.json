@@ -31,19 +31,14 @@
       "id": 9
     },
     {
-      "author": "Uber Guy",
-      "quote": "In the darkest night of the world ddd\n",
-      "id": 10
+      "author": "Lorem Lorem\n",
+      "quote": "Lorem ipsum dolor sit amet consectetur, adipisicin",
+      "id": 14
     },
     {
-      "author": "",
-      "quote": "tttttttttttttteeeeeeeeeeerrrryyyyyyeeeeeeerrrassss",
-      "id": 11
-    },
-    {
-      "author": "",
-      "quote": "aaaaaaaaaaaaaafjjjisfliiiiiiiiiiiiiewooooooooooofj",
-      "id": 12
+      "author": "Lorem 2",
+      "quote": "Lorem ipsum dolor sit amet consectetur, adipisicin",
+      "id": 15
     }
   ]
 }

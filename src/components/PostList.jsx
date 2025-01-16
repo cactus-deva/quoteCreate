@@ -23,9 +23,9 @@ export default function PostList(props) {
             <div className="grid grid-cols-1">
                 {[...Array(6)].map((_, index) => {
                     return (
-                    <div key={index} className="flex items-center h-[160px] m-3 rounded-md">
+                    <div key={index} className="flex items-center h-[160px]rounded-md m-3">
                         <SkeletonTheme baseColor="lightblue" highlightColor="turquoise">
-                           <Skeleton count={5} height={30} containerClassName="flex-1" /> 
+                           <Skeleton count={5} circle={10} height={30} containerClassName="flex-1" /> 
                         </SkeletonTheme>
                     </div>
                 )})
@@ -35,7 +35,7 @@ export default function PostList(props) {
     }
 
     return (
-        <div className='grid grid-cols-2 gap-4'>
+        <div className='grid grid-cols-1 xl:grid-cols-2 2xl:grid-cols-3 gap-4 m-3'>
             {renderPosts}
         </div>
 

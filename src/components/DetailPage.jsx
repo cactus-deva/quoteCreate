@@ -10,7 +10,7 @@ export default function DetailPage() {
     const { id } = useParams()
     const [backgroundColor, setBackgroundColor] = useState("")
 
-    const post = posts.find((p) => p.id === parseInt(id))    
+    const post = posts.find((p) => p.id === parseInt(id))
 
     useEffect(() => {
         fetchPosts()
@@ -18,41 +18,42 @@ export default function DetailPage() {
     }, [])
 
     if (isLoading) {
-           return (
-               <div className="grid grid-cols-1">
-                   {[...Array(3)].map((_, index) => {
-                       return (
-                       <div key={index} className="flex justify-center items-center h-full w-full py-[20px] rounded-md">
-                           <SkeletonTheme baseColor="lightblue" highlightColor="turquoise">
-                              <Skeleton count={6} height={30} containerClassName="flex-1" /> 
-                           </SkeletonTheme>
-                       </div>
-                   )})
-                   }
-               </div>
-           );
-       }
-    
+        return (
+            <div className="flex flex-col items-center justify-center">
+                {[...Array(1)].map((_, index) => {
+                    return (
+                        <div key={index} className="flex justify-center items-center h-full w-full py-[20px] rounded-md mt-[40%] p-[40px]">
+                            <SkeletonTheme baseColor="lightblue" highlightColor="turquoise">
+                                <Skeleton count={10} circle={30} height={30} containerClassName="flex-1" />
+                            </SkeletonTheme>
+                        </div>
+                    )
+                })
+                }
+            </div>
+        );
+    }
+
     const showPostPage =
         post ?
-            <div className="flex flex-col items-center left-1 h-[100vh] p-[100px] text-center"
+            <div className="flex flex-col items-center relative left-1 h-full p-[10%] text-center text-[10px] md:text-[20px] text-white"
                 style={{ backgroundColor: isDarkMode ? "black" : backgroundColor }}>
-                <Link to="/" className="absolute top-2 left-2 bg-transparent hover:bg-white w-[200px] hover:text-black p-1 rounded-md border-2 text-white">
-                Back to Home
+                <Link to="/" className="absolute top-2 left-2 bg-transparent rounded-md border-2 hover:bg-white w-[120px] md:w-[250px] h-[40px] sm:h-[30px] md:h-[50px] pt-2 m-2 hover:text-black">
+                    Back to Home
                 </Link>
-                <div className={`abosolute rounded-3xl m-40 p-6 bg-white bg-opacity-30 min-h-[200px] w-auto text-[40px] text-black`}>
-                    <h1>{post.quote}</h1>
-                    <h1>----{post.author !== "" ? post.author : "Unknown"}----</h1>
+                <div className={`h-auto w-full rounded-3xl bg-white bg-opacity-30 m-[20%] sm:m-[25%] md:m-[15%] xl:m-[5%] p-10 lg:p-20 text-[15px] md:text-[35px] lg:text-[40px] text-black`}>
+                    <h1 className="break-words">{post.quote}</h1>
+                    <h1 className="font-bold">--{post.author !== "" ? post.author : "Unknown"}--</h1>
                 </div>
             </div>
             :
-            <div className="font-show flex flex-col items-center justify-center h-[100vh] text-[70px] bg-cover">
+            <div className={`h-auto w-[100%] abosolute rounded-3xl bg-white bg-opacity-30 sm:w-[100%] m-[70%] sm:m-[50%] md:m-[30%] p-7 text-[30px] sm:text-[40px] md:text-[60px] text-black`}>
                 <h1>Post not found</h1>
             </div>
 
 
     return (
-        <div className={`box-border flex flex-col h-[100vh]`}>
+        <div className={`box-border flex flex-col h-[100vh] overflow-hidden`}>
             {showPostPage}
         </div>
     )
