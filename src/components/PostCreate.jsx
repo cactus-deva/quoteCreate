@@ -39,7 +39,7 @@ export default function PostCreate() {
                 </div>
                 <div className="flex items-start mb-2">
                     <label className="mr-2">Author</label>
-                    <textarea type="text" maxLength="15" placeholder="Your name" rows="1"
+                    <input type="text" maxLength="15" placeholder="Your name" rows="1"
                         className=" text-black rounded-md resize-none overflow-hidden h-[21px] md:h-[28px] lg:h-[30px] w-[70%] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px] p-1" 
                         value={author} onChange={handleChangeAuthor} />
                 </div>

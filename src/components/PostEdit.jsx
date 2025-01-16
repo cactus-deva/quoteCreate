@@ -30,7 +30,7 @@ export default function PostEdit({ post, onSubmit }) {
                 </div>
                 <div className="flex gap-1 mb-1">
                     <label>Author</label>
-                    <textarea type="text" maxLength="15" value={author} onChange={handleChangeAuthor} className="w-[100%] h-8 rounded-md ml-2 pl-1" />
+                    <input type="text" maxLength="15" value={author} onChange={handleChangeAuthor} className="w-[100%] h-8 rounded-md ml-2 pl-1" />
                 </div>
                 <button className="bg-white hover:bg-indigo-400 w-[70px] md:w-[90px] h-[20px] md:h-[25px] lg:h-[30px] rounded-md mt-2 md:mt-3 lg:mt-4">
                     Save
