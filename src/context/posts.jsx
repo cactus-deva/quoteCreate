@@ -8,7 +8,7 @@ export function Provider({ children }) {
   const [isLoading, setIsLoading] = useState(true)
 
   const URL = "http://localhost:3001/posts"  
-
+  
   const fetchPosts = async () => {
     const response = await axios.get(URL);
     setTimeout(() => {

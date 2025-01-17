@@ -9,8 +9,8 @@ export default function DetailPage() {
     const { isDarkMode, randomBackgroundColor } = useContext(DarkModeContext)
     const { id } = useParams()
     const [backgroundColor, setBackgroundColor] = useState("")
-
-    const post = posts.find((p) => p.id === parseInt(id))
+    
+    const post = posts.find((p) => p.id === id)
 
     useEffect(() => {
         fetchPosts()
@@ -36,7 +36,7 @@ export default function DetailPage() {
 
     const showPostPage =
         post ?
-            <div className="flex flex-col items-center relative left-1 h-full p-[10%] text-center text-[10px] md:text-[20px] text-white"
+            <div className="flex flex-col items-center relative h-full p-[10%] text-center text-[10px] md:text-[20px] text-white"
                 style={{ backgroundColor: isDarkMode ? "black" : backgroundColor }}>
                 <Link to="/" className="absolute top-2 left-2 bg-transparent rounded-md border-2 hover:bg-white w-[120px] md:w-[250px] h-[40px] sm:h-[30px] md:h-[50px] pt-2 m-2 hover:text-black">
                     Back to Home

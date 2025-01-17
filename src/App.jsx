@@ -14,7 +14,6 @@ function App() {
   const [term, setTerm] = useState("")
   const handleSubmit = (term) => setTerm(term)
 
-
   useEffect(() => {
     fetchPosts()
 
