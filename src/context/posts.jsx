@@ -4,23 +4,24 @@ import axios from "axios";
 export const PostContext = createContext();
 
 export function Provider({ children }) {
-  const [posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([])  //posts ==> [{author:"", quote:"", id:""}, {}, {}]
   const [isLoading, setIsLoading] = useState(true)
+  const URL = "http://localhost:3001/posts"
 
-  const URL = "http://localhost:3001/posts"  
-  
   const fetchPosts = async () => {
     const response = await axios.get(URL);
     setTimeout(() => {
       setPosts(response.data)
       setIsLoading(false)
-    }, 1000); 
-  }  
+    }, 1000);
+  }
 
   const createPost = async (author, quote) => {
     const response = await axios.post(URL,
       { author, quote }
     )
+    
+    //response.data ==> {author: "", quote: "", id: ""}
     const updatePosts = [
       ...posts, response.data
     ]
@@ -41,6 +42,7 @@ export function Provider({ children }) {
       author: newAuthor,
       quote: newQuote
     })
+    //response.data ==> {author: "", quote: "", id: ""}
 
     const updatePosts = posts.map((post) => {
       if (post.id === id) {

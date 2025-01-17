@@ -9,7 +9,7 @@ export default function PostEdit({ post, onSubmit }) {
 
     const handleChangeAuthor = (e) => {
         setAuthor(e.target.value)
-    }
+    }    
 
     const handleChangeQuote = (e) => {
         setQuote(e.target.value)
