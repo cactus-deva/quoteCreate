@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "author": "Ron Jeffrey",
+      "author": "Ron Jeffreys",
       "quote": "Code never lies, comments did.",
       "id": "3"
     },
@@ -32,23 +32,38 @@
     },
     {
       "author": "Lorem Lorems",
-      "quote": "Lorem ipsum dolor sit amet consectetur, adipisicin",
+      "quote": "Lorem ipsum dolor sit amet consecteture",
       "id": "14"
     },
     {
-      "author": "",
-      "quote": "Lorem ipsum dolor sit amet consec....",
-      "id": "8924"
+      "author": "Mike",
+      "quote": "If the code doesn't bother you, don't bother it. ",
+      "id": "fEKKQy3"
     },
     {
       "author": "",
-      "quote": "ffffffffffffffffffffffffffffffffffffffffffffffsss",
-      "id": "BdS2ADM"
+      "quote": "Computers are fast, programmers keep it slow  ",
+      "id": "oUuWlwb"
     },
     {
       "author": "",
-      "quote": "ssssssssssssssssssssssssssssssssssssssssss",
-      "id": "n7Gebui"
+      "quote": "fssssssssssssssssss",
+      "id": "GPSOXI_"
+    },
+    {
+      "author": "",
+      "quote": "fffffffffffffffsssssssssssssssssssssss",
+      "id": "j2xnOcb"
+    },
+    {
+      "author": "",
+      "quote": "fffsssssssssssssssssssssssssssssssssssssssssssssss",
+      "id": "cMaRWaC"
+    },
+    {
+      "author": "sssssssss",
+      "quote": "fffffffffffffffffffffffffffffffffffffff",
+      "id": "uLvJDNS"
     }
   ]
 }

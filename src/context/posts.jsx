@@ -6,7 +6,7 @@ export const PostContext = createContext();
 export function Provider({ children }) {
   const [posts, setPosts] = useState([])  //posts ==> [{author:"", quote:"", id:""}, {}, {}]
   const [isLoading, setIsLoading] = useState(true)
-  const URL = "http://localhost:3001/posts"
+  const URL = "http://localhost:3002/posts"
 
   const fetchPosts = async () => {
     const response = await axios.get(URL);
@@ -20,7 +20,6 @@ export function Provider({ children }) {
     const response = await axios.post(URL,
       { author, quote }
     )
-    
     //response.data ==> {author: "", quote: "", id: ""}
     const updatePosts = [
       ...posts, response.data
@@ -43,7 +42,6 @@ export function Provider({ children }) {
       quote: newQuote
     })
     //response.data ==> {author: "", quote: "", id: ""}
-
     const updatePosts = posts.map((post) => {
       if (post.id === id) {
         return { ...post, ...response.data }
@@ -63,7 +61,8 @@ export function Provider({ children }) {
         editPostbyId,
         createPost,
         fetchPosts,
-        isLoading
+        isLoading,
+        
       }
     }>
       {children}

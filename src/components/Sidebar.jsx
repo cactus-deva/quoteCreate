@@ -28,9 +28,9 @@ export default function Sidebar() {
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20">
                                 <defs>
                                     <linearGradient id="ig-gradient-small" x1="4.996" x2="20.308" y1="4.996" y2="20.308" gradientUnits="userSpaceOnUse">
-                                        <stop offset="0%" stop-color="#f58529" />
-                                        <stop offset="50%" stop-color="#dd2a7b" />
-                                        <stop offset="100%" stop-color="#8134af" />
+                                        <stop offset="0%" stopColor="#f58529" />
+                                        <stop offset="50%" stopColor="#dd2a7b" />
+                                        <stop offset="100%" stopColor="#8134af" />
                                     </linearGradient>
                                 </defs>
                                 <path fill="url(#ig-gradient-small)" d="M17.138 2H6.862A4.867 4.867 0 002 6.862v10.276A4.867 4.867 0 006.862 22h10.276A4.867 4.867 0 0022 17.138V6.862A4.867 4.867 0 0017.138 2zM12 17.25a5.25 5.25 0 110-10.5 5.25 5.25 0 010 10.5zm7.5-12a1.125 1.125 0 11-2.25 0 1.125 1.125 0 012.25 0z" />

@@ -9,12 +9,17 @@ export default function DetailPage() {
     const { isDarkMode, randomBackgroundColor } = useContext(DarkModeContext)
     const { id } = useParams()
     const [backgroundColor, setBackgroundColor] = useState("")
+    const [post, setPost] = useState([])
 
-    const post = posts.find((p) => p.id === id)
+    useEffect(() => {
+        const findPostbyID = posts.find((p) => p.id === id)
+        setPost(findPostbyID)
+    }, [post])
 
     useEffect(() => {
         fetchPosts()
         setBackgroundColor(randomBackgroundColor())
+
     }, [])
 
     if (isLoading) {
@@ -34,7 +39,7 @@ export default function DetailPage() {
         );
     }
 
-    const showPostPage =
+    const ShowPostPage = () =>
         !isLoading ?
             <div className={`h-auto w-full rounded-3xl bg-white bg-opacity-30 m-[20%] sm:m-[25%] md:m-[15%] xl:m-[5%] p-10 lg:p-20 text-[15px] md:text-[35px] lg:text-[40px] text-black`}>
                 <h1 className="break-words">{post.quote}</h1>
@@ -52,7 +57,7 @@ export default function DetailPage() {
                 <Link to="/" className="absolute top-2 left-2 bg-transparent rounded-md border-2 hover:bg-white w-[120px] md:w-[250px] h-[40px] sm:h-[30px] md:h-[50px] pt-2 m-2 hover:text-black">
                     Back to Home
                 </Link>
-                {showPostPage}
+                <ShowPostPage />
             </div>
         </div>
     )
