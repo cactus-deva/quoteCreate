@@ -20,7 +20,7 @@ export default function PostShow(props) {
         setBackgroundColor(randomBackgroundColor())
     }, [])
 
-    let content =
+    let Content = () =>
         <Link to={`DetailPage/${post.id}`} >
             <div className='flex flex-col flex-wrap items-center overflow-hidden text-black text-center'>
                 <div className={`flex flex-col justify-around w-full bg-white bg-opacity-50 rounded-2xl h-[100px] md:h-[140px] lg:h-[170px] xl:h-[150px] p-1`}>
@@ -39,7 +39,7 @@ export default function PostShow(props) {
         </Link>
 
     if (postEdit) {
-        content = <PostEdit post={post} onSubmit={handleSubmit} />
+        Content = () => <PostEdit post={post} onSubmit={handleSubmit} />
     }
 
     if (isOpen) {
@@ -50,7 +50,7 @@ export default function PostShow(props) {
         <div>
             <div className={`flex flex-col justify-around  w-full h-full rounded-2xl hover:border-4 border-yellow-400 p-3 md:h-[100%] lg:h-[230px] xl:h-[230px] text-black `}
                 style={{ backgroundColor: isDarkMode ? "gray" : backgroundColor }}>
-                {content}
+                <Content />
 
                 <div className="flex justify-end items-baseline">
                     <button id="edit" onClick={handleEditClick}>
