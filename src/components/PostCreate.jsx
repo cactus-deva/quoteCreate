@@ -25,11 +25,10 @@ export default function PostCreate() {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault()        
         createPost(author, quote)
         setAuthor("")
         setQuote("")
-        setQuoteLength(quoteMaxLength)
     }
 
     return (
@@ -59,9 +58,9 @@ export default function PostCreate() {
                     <div className="flex flex-col items-center">
                         <label className="mr-2">Author</label>
                     </div>
-                    <textarea maxLength="15" placeholder="Your name"
+                    <textarea maxLength="15" placeholder="Your name" value={author} onChange={handleChangeAuthor}
                         className=" rounded-md overflow-hidden h-[21px] md:h-[28px] lg:h-[30px] w-[100%] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px] min-w-[192px] p-1 text-black resize-none"
-                        value={author} onChange={handleChangeAuthor}
+                        
                     />
                 </div>
                 <div className="flex justify-center">

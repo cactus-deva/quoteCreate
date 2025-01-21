@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className={`flex flex-col min-h-screen w-full
-    ${isDarkMode ? "bg-black text-white" : "bg-indigo-300 text-black"}`}
+    ${isDarkMode ? "bg-black text-white" : "bg-indigo-200 text-black"}`}
     >
       <div className='box-border shadow-md sticky top-0 z-10'>
         <div className={`flex justify-between font-bold p-1 

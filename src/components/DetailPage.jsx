@@ -9,20 +9,19 @@ export default function DetailPage() {
     const { isDarkMode, randomBackgroundColor } = useContext(DarkModeContext)
     const { id } = useParams()
     const [backgroundColor, setBackgroundColor] = useState("")
-    const [post, setPost] = useState([])
-
-    useEffect(() => {
-        const findPostbyID = posts.find((p) => p.id === id)
-        setPost(findPostbyID)
-    }, [post])
+    const [post, setPost] = useState(null)
 
     useEffect(() => {
         fetchPosts()
         setBackgroundColor(randomBackgroundColor())
-
     }, [])
 
-    if (isLoading) {
+    useEffect(() => {
+        const findPostbyID = posts.find((p) => p.id === id)
+        setPost(findPostbyID)
+    }, [posts])
+
+    if (isLoading || !post) {
         return (
             <div className="flex flex-col items-center justify-center">
                 {[...Array(1)].map((_, index) => {
@@ -41,12 +40,12 @@ export default function DetailPage() {
 
     const ShowPostPage = () =>
         !isLoading ?
-            <div className={`h-auto w-full rounded-3xl bg-white bg-opacity-30 m-[20%] sm:m-[25%] md:m-[15%] xl:m-[5%] p-10 lg:p-20 text-[15px] md:text-[35px] lg:text-[40px] text-black`}>
+            <div className={`h-auto w-full rounded-3xl bg-white bg-opacity-30 m-[20%] sm:m-[25%] md:m-[15%] xl:m-[5%] p-10 lg:p-20 text-[15px] md:text-[35px] lg:text-[40px] text-white`}>
                 <h1 className="break-words">{post.quote}</h1>
                 <h1 className="font-bold">--{post.author !== "" ? post.author : "Unknown"}--</h1>
             </div>
             :
-            <div className={`h-auto w-full rounded-3xl bg-white bg-opacity-30 m-[20%] sm:m-[25%] md:m-[15%] xl:m-[5%] p-10 lg:p-20 text-[15px] md:text-[35px] lg:text-[40px] text-black`}>
+            <div className={`h-auto w-full rounded-3xl bg-white bg-opacity-30 m-[20%] sm:m-[25%] md:m-[15%] xl:m-[5%] p-10 lg:p-20 text-[15px] md:text-[35px] lg:text-[40px] text-white`}>
                 <h1>Post not found</h1>
             </div>
 
