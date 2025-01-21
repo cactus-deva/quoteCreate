@@ -16,6 +16,7 @@ export default function PostCreate() {
 
     const handleChangeQuote = (e) => {
         setQuote(e.target.value)
+        //if type letters e.nativeEvent.data will be string, but backspace will be null 
         if (e.nativeEvent.data) {
             quoteMaxLength - quote.length
         } else {
@@ -38,7 +39,7 @@ export default function PostCreate() {
             <form onSubmit={handleSubmit} className="flex flex-col items-center w-full gap-1 text-[10px] md:text-[15px] lg:text-[16px]">
                 <h1 className="font-bold mb-1">Create Your Quote</h1>
 
-                <div className="flex items-start mb-2">
+                <div className="flex mb-2">
                     <div className="flex flex-col items-center">
                         <label className="mr-2">Quotes</label>
                         <span className="text-[8px] md:text-[10px] lg:text-[12px] xl:text-[15px]">
@@ -51,15 +52,15 @@ export default function PostCreate() {
                         value={quote}
                         onChange={handleChangeQuote}
                         required
-                        className="rounded-md h-[50px] md:h-[60px] lg:h-[100px] xl:h-[80px] w-[70%] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px] p-1 text-black resize-none"
+                        className="rounded-md h-[50px] md:h-[60px] lg:h-[100px] xl:h-[80px] w-[100%] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px] p-1 text-black resize-none"
                     />
                 </div >
-                <div className="flex items-start mb-2">
+                <div className="flex mb-2">
                     <div className="flex flex-col items-center">
                         <label className="mr-2">Author</label>
                     </div>
                     <textarea maxLength="15" placeholder="Your name"
-                        className=" rounded-md overflow-hidden h-[21px] md:h-[28px] lg:h-[30px] w-[70%] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px] p-1 text-black resize-none"
+                        className=" rounded-md overflow-hidden h-[21px] md:h-[28px] lg:h-[30px] w-[100%] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px] min-w-[192px] p-1 text-black resize-none"
                         value={author} onChange={handleChangeAuthor}
                     />
                 </div>

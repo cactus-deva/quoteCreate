@@ -16,7 +16,6 @@ function App() {
 
   useEffect(() => {
     fetchPosts()
-
   }, [])
 
   return (
@@ -29,11 +28,11 @@ function App() {
         >
           <h1 className='flex items-center text-white font-bold text-[12px] md:text-[20px] ml-3'>
             Quote of the Day
-            </h1>
+          </h1>
           <div className={`flex items-center justify-center`}>
             <SearchQuote onSubmit={handleSubmit} term={term} setTerm={setTerm} />
-            <button className={`rounded-[50%] bg-blue-500 hover:bg-blue-600 px-4 py-2 m-2
-            ${isDarkMode ? "bg-black text-white" : "bg-white text-black"}`}
+            <button className={`rounded-[50%] hover:bg-blue-300 px-3 py-2 m-2
+            ${isDarkMode ? "bg-indigo-800 text-white" : " bg-white text-black"}`}
               onClick={toggleDarkMode}>
               <svg className='w-3 h-5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M21.053 15.806a10 10 0 01-8.8-15.71A10.003 10.003 0 002 12a10 10 0 0019.053 3.806z" />

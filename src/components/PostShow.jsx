@@ -7,28 +7,32 @@ import ConfirmDelete from './ConfirmDelete';
 export default function PostShow(props) {
     const { post } = props
 
-    const {isDarkMode, randomBackgroundColor } = useContext(DarkModeContext)
+    const { isDarkMode, randomBackgroundColor } = useContext(DarkModeContext)
     const [isOpen, setIsOpen] = useState(false) //toggle confirm delete page
     const [postEdit, setPostEdit] = useState(false)
     const [backgroundColor, setBackgroundColor] = useState("")
 
     const handleDeleteClick = () => setIsOpen(!isOpen)
     const handleEditClick = () => setPostEdit(!postEdit)
-    const handleSubmit = () => setPostEdit(false)   
+    const handleSubmit = () => setPostEdit(false)
 
     useEffect(() => {
         setBackgroundColor(randomBackgroundColor())
-    },[])
+    }, [])
 
     let content =
         <Link to={`DetailPage/${post.id}`} >
             <div className='flex flex-col flex-wrap items-center overflow-hidden text-black text-center'>
-                <div className={`flex flex-col justify-around w-full bg-white bg-opacity-50 rounded-2xl h-[100px] md:h-[140px] lg:h-[170px] xl:h-[150px]`}>
+                <div className={`flex flex-col justify-around w-full bg-white bg-opacity-50 rounded-2xl h-[100px] md:h-[140px] lg:h-[170px] xl:h-[150px] p-1`}>
                     {
-                        post.quote.includes(" ") ? 
-                        <div className='text-[14px] sm:text-[18px] md:text-[22px] lg:text-[28px] xl:text-[25px] 2xl:text-[23px] break-words leading-tight'>{post.quote}</div> 
-                        :<div className='text-[14px] sm:text-[18px] md:text-[22px] lg:text-[28px] xl:text-[25px] 2xl:text-[23px] break-all'>{post.quote}</div>
-                    }   
+                        post.quote.includes(" ") ?
+                            <div className='text-[14px] sm:text-[18px] md:text-[22px] lg:text-[28px] xl:text-[25px] 2xl:text-[23px] break-words leading-tight'>
+                                {post.quote}
+                            </div>
+                            : <div className='text-[14px] sm:text-[18px] md:text-[22px] lg:text-[28px] xl:text-[25px] 2xl:text-[23px] break-all'>
+                                {post.quote}
+                            </div>
+                    }
                     <div className='text-[15px] md:text-[18px] lg:text-[21px] xl:text-[22px] font-semibold break-words'>--{post.author !== "" ? post.author : "Unknown"}--</div>
                 </div>
             </div>
@@ -41,11 +45,11 @@ export default function PostShow(props) {
     if (isOpen) {
         return <ConfirmDelete isOpen={isOpen} setIsOpen={setIsOpen} post={post} />
     }
-  
+
     return (
         <div>
             <div className={`flex flex-col justify-around  w-full h-full rounded-2xl hover:border-4 border-yellow-400 p-3 md:h-[100%] lg:h-[230px] xl:h-[230px] text-black `}
-                 style={{backgroundColor: isDarkMode ? "gray" : backgroundColor}}>
+                style={{ backgroundColor: isDarkMode ? "gray" : backgroundColor }}>
                 {content}
 
                 <div className="flex justify-end items-baseline">
