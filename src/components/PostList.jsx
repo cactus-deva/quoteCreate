@@ -7,6 +7,8 @@ import 'react-loading-skeleton/dist/skeleton.css'
 export default function PostList(props) {
     const { posts, isLoading } = useContext(PostContext);
     const { term } = props
+    console.log(posts);
+    
     
     const filterPosts = posts.filter((post) => {        
         return post.quote.toLowerCase().includes(term.toLowerCase()) || post.author.toLowerCase().includes(term.toLowerCase())
