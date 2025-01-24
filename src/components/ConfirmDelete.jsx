@@ -17,8 +17,14 @@ export default function ConfirmDelete(props) {
             <div className="flex flex-col text-center justify-around h-[80px]">
                 <h1>Confirm delete?</h1>
                 <div className="flex justify-around">
-                    <button className="bg-[green] hover:bg-white rounded-md p-1 w-16 md:w-20" onClick={handleDeleteConfirm}>Yes</button>
-                    <button className="bg-[red] hover:bg-white rounded-md p-1 w-16 md:w-20" onClick={() => setIsOpen(false)}>No</button>
+                    <button className="bg-[green] hover:bg-white rounded-md p-1 w-16 md:w-20"
+                        onClick={handleDeleteConfirm}>
+                        Yes
+                    </button>
+                    <button className="bg-[red] hover:bg-white rounded-md p-1 w-16 md:w-20"
+                        onClick={() => setIsOpen(false)}>
+                        No
+                    </button>
                 </div>
             </div>
         </div>

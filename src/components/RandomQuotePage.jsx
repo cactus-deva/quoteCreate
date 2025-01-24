@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import RandomQuoteApi from "../api/api";
+import { getQuote } from "../api/api";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from '../context/darkModeTheme';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
@@ -10,7 +10,7 @@ export default function RandomQuotePage() {
 
     const fetchData = async () => {
         try {
-            const res = await RandomQuoteApi()
+            const res = await getQuote()
             setQuote(...res)
         } catch (error) {
             console.log("Data not found >> ", error);

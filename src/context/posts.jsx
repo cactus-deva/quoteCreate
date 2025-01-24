@@ -61,8 +61,7 @@ export function Provider({ children }) {
         editPostbyId,
         createPost,
         fetchPosts,
-        isLoading,
-        
+        isLoading, 
       }
     }>
       {children}

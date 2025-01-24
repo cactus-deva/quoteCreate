@@ -43,12 +43,12 @@ export default function PostShow(props) {
     }
 
     if (isOpen) {
-        return <ConfirmDelete isOpen={isOpen} setIsOpen={setIsOpen} post={post} />
+        return <ConfirmDelete setIsOpen={setIsOpen} post={post} />
     }
 
     return (
         <div>
-            <div className={`flex flex-col justify-around  w-full h-full rounded-2xl hover:border-4 border-yellow-400 p-3 md:h-[100%] lg:h-[230px] xl:h-[230px] text-black `}
+            <div className={`flex flex-col justify-around w-full h-full rounded-2xl hover:border-4 border-yellow-400 p-3 md:h-[100%] lg:h-[230px] xl:h-[230px] text-black `}
                 style={{ backgroundColor: isDarkMode ? "gray" : backgroundColor }}>
                 <Content />
 
