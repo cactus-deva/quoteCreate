@@ -39,7 +39,7 @@ export default function PostCreate() {
                 <h1 className="font-bold mb-1">Create Your Quote</h1>
 
                 <div className="flex mb-2">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-start">
                         <label className="mr-2">Quotes</label>
                         <span className="text-[8px] md:text-[10px] lg:text-[12px] xl:text-[15px]">
                             {quoteMaxLength - quote.length} / {quoteMaxLength}
@@ -55,7 +55,7 @@ export default function PostCreate() {
                     />
                 </div >
                 <div className="flex mb-2">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-start">
                         <label className="mr-2">Author</label>
                     </div>
                     <textarea maxLength="15" placeholder="Your name" value={author} onChange={handleChangeAuthor}
