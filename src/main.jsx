@@ -7,6 +7,8 @@ import { Provider } from './context/posts'
 import RandomQuotePage from './components/RandomQuotePage'
 import { DarkModeProvider } from './context/darkModeTheme'
 import ConfirmDelete from './components/ConfirmDelete'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
 
 const router = createBrowserRouter([
   {

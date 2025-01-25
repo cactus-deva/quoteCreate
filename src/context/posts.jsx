@@ -6,9 +6,8 @@ export const PostContext = createContext();
 export function Provider({ children }) {
   const [posts, setPosts] = useState([])  //posts ==> [{author:"", quote:"", id:""}, {}, {}]
   const [isLoading, setIsLoading] = useState(true)
-  // const URL = "http://localhost:3002/posts"
+  const URL = "http://localhost:3002/posts"
 
-  const URL = `${import.meta.env.VITE_BASE_API_URL}`
   const fetchPosts = async () => {
     const response = await axios.get(URL);
     setTimeout(() => {
