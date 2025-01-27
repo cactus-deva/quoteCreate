@@ -6,7 +6,7 @@ export const PostContext = createContext();
 export function Provider({ children }) {
   const [posts, setPosts] = useState([])  //posts ==> [{author:"", quote:"", id:""}, {}, {}]
   const [isLoading, setIsLoading] = useState(true)
-  const URL = "http://localhost:3002/posts"
+  const URL = "https://quote-json-server.vercel.app/posts"
 
   const fetchPosts = async () => {
     const response = await axios.get(URL);
