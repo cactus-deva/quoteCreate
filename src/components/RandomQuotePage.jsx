@@ -3,6 +3,7 @@ import { getQuote } from "../api/api";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from '../context/darkModeTheme';
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
+import SplashCursor from "../animation/Components/PixelCard/SplashCursor";
 
 export default function RandomQuotePage() {
     const { isDarkMode } = useContext(DarkModeContext)
@@ -57,6 +58,7 @@ export default function RandomQuotePage() {
                     <h3 className="text-gray-600 md:text-xl lg:text-2xl mt-5 text-[14px]">{quote.author}</h3>
                 </div>
             </div>
+            <SplashCursor />
         </div>
 
 

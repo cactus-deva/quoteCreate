@@ -6,6 +6,8 @@ import { PostContext } from './context/posts';
 import { DarkModeContext } from './context/darkModeTheme';
 import Sidebar from './components/Sidebar';
 import SearchQuote from './components/SearchQuote';
+import SplashCursor from './animation/Components/PixelCard/SplashCursor';
+import ShinyText from './animation/Components/PixelCard/ShinyText';
 
 
 function App() {
@@ -26,9 +28,10 @@ function App() {
         <div className={`flex justify-between font-bold p-1 
           ${isDarkMode ? "bg-gradient-to-r from-black to-white" : "bg-gradient-to-r from-slate-900 to-indigo-500"}`}
         >
-          <h1 className='flex items-center text-white font-bold text-[12px] md:text-[20px] ml-3'>
-            Quote of the Day
+          <h1 className='text-2xl'> 
+ <ShinyText text="Quote of the day" disabled={false} speed={3} className='custom-class' />
           </h1>
+         
           <div className={`flex items-center justify-center`}>
             <SearchQuote onSubmit={handleSubmit} term={term} setTerm={setTerm} />
             <button className={`rounded-[50%] hover:bg-blue-300 px-3 py-2 m-2
@@ -50,9 +53,8 @@ function App() {
           <Sidebar />
         </div>
       </div>
+      <SplashCursor />
     </div>
-
-
   )
 }
 

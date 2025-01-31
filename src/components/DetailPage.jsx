@@ -3,6 +3,7 @@ import { PostContext } from "../context/posts"
 import { useParams, Link } from "react-router-dom"
 import { DarkModeContext } from "../context/darkModeTheme"
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton"
+import SplashCursor from "../animation/Components/PixelCard/SplashCursor"
 
 export default function DetailPage() {
     const { posts, fetchPosts, isLoading } = useContext(PostContext)
@@ -58,6 +59,7 @@ export default function DetailPage() {
                 </Link>
                 <ShowPostPage />
             </div>
+            <SplashCursor />
         </div>
     )
 }
