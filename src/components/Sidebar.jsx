@@ -5,7 +5,7 @@ export default function Sidebar() {
     return (
         <div className='flex flex-col justify-between items-center h-full w-full m-3'>
             <div className="flex flex-col items-center justify-start h-full w-[100px] md:w-[150px] xl:w-[220px]">
-                <Link to="/RandomQuotePage" className="flex items-center justify-center rounded-2xl font-semibold bg-rose-500 hover:bg-indigo-500 p-2 h-[30px] sm:h-[40px] md:h-[50px] 2xl:h-[70px] w-[100px] sm:w-[100px] md:w-[180px] lg:w-[170px] 2xl:w-[200px] text-white text-center">
+                <Link to="/RandomQuotePage" className="flex items-center justify-center rounded-2xl font-semibold bg-[#4CAF50] hover:bg-white hover:text-[#C1E1C1] hover:border-2 border-[#C1E1C1] p-2 h-[30px] sm:h-[40px] md:h-[50px] 2xl:h-[70px] w-[100px] sm:w-[100px] md:w-[180px] lg:w-[170px] 2xl:w-[200px] text-white text-center">
                     Random Quote
                 </Link>
 

@@ -33,7 +33,7 @@ export default function PostCreate() {
 
     return (
         <div className={`flex flex-col items-center justify-around w-full h-[160px] md:h-[200px] lg:h-[260px] xl:h-[240px] p-2 text-white 
-        ${isDarkMode ? "bg-gradient-to-r from-black to-white" : "bg-gradient-to-r from-slate-900 to-indigo-500"}`}
+        ${isDarkMode ? "bg-gradient-to-r from-black to-white" : "bg-[#A8D5BA]"}`}
         >
             <h1 className="font-bold mb-1 text-[10px] md:text-[15px] lg:text-[16px]">Create Your Quote</h1>
             <form onSubmit={handleSubmit} className="flex flex-col items-center w-full gap-1 px-10 text-[10px] md:text-[15px] lg:text-[16px]">
@@ -63,7 +63,7 @@ export default function PostCreate() {
                     
                 </div>
                 <div className="flex justify-center pl-8 h-[21px] md:h-[28px] lg:h-[30px] w-[200px] md:w-[400px] lg:w-[500px] xl:w-[500px] 2xl:w-[600px]">
-                    <button className="bg-[white] w-[100px] h-[24px] lg:h-[30px] rounded-lg hover:bg-gradient-to-r from-violet-500 to-fuchsia-500 text-black">
+                    <button className="bg-[white] w-[100px] h-[24px] lg:h-[30px] rounded-lg hover:bg-[#4CAF50] hover:text-white text-black">
                         Submit
                     </button>
                 </div>

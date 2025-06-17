@@ -13,7 +13,7 @@ export function Provider({ children }) {
     setTimeout(() => {
       setPosts(response.data)
       setIsLoading(false)
-    }, 1000);
+    }, 4000);
   }
 
   const createPost = async (author, quote) => {
@@ -62,6 +62,7 @@ export function Provider({ children }) {
         createPost,
         fetchPosts,
         isLoading, 
+        setIsLoading
       }
     }>
       {children}
