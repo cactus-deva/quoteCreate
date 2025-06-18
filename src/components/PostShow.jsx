@@ -68,7 +68,7 @@ export default function PostShow(props) {
     <div>
       {!imgLoading && (
         <div
-          className={`flex flex-col justify-around w-full h-full rounded-2xl hover:border-4 border-yellow-400 p-3 md:h-[100%] lg:h-[230px] xl:h-[230px] text-black `}
+          className={`flex flex-col justify-around w-full h-full rounded-2xl bg-green-700 hover:shadow-[0_0_15px_3px_rgba(72,187,120,0.8)] transition-all duration-300 p-3 md:h-[100%] lg:h-[230px] xl:h-[230px] text-black`}
           style={
             isDarkMode
               ? { backgroundColor: "gray" }

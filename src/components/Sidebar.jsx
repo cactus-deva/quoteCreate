@@ -3,9 +3,10 @@ import { Link } from "react-router-dom"
 export default function Sidebar() {
 
     return (
-        <div className='flex flex-col justify-between items-center h-full w-full m-3'>
+        <div className='flex flex-col justify-between items-center h-full w-fit m-3'>
             <div className="flex flex-col items-center justify-start h-full w-[100px] md:w-[150px] xl:w-[220px]">
-                <Link to="/RandomQuotePage" className="flex items-center justify-center rounded-2xl font-semibold bg-[#4CAF50] hover:bg-white hover:text-[#C1E1C1] hover:border-2 border-[#C1E1C1] p-2 h-[30px] sm:h-[40px] md:h-[50px] 2xl:h-[70px] w-[100px] sm:w-[100px] md:w-[180px] lg:w-[170px] 2xl:w-[200px] text-white text-center">
+                <Link to="/RandomQuotePage" className="flex items-center justify-center rounded-2xl font-semibold bg-[#4CAF50] hover:bg-white hover:text-[#C1E1C1] hover:border-2 border-[#C1E1C1] p-2 
+                h-[30px] sm:h-[40px] md:h-[50px] 2xl:h-[70px] w-[100px] sm:w-[100px] md:w-[180px] lg:w-[170px] 2xl:w-[200px] text-white text-center">
                     Random Quote
                 </Link>
 
@@ -13,7 +14,7 @@ export default function Sidebar() {
                     <h1>Follow us:</h1>
                     <div className="flex justify-around items-baseline w-full m-3">
                         <a href="https://www.facebook.com/">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24">
                                 <path fill="#4267B2" d="M22.676 0H1.324C.593 0 0 .594 0 1.326v21.348C0 23.406.594 24 1.324 24h11.495V14.708h-3.13v-3.628h3.13V8.412c0-3.1 1.89-4.79 4.65-4.79 1.324 0 2.463.1 2.795.143v3.242l-1.917.001c-1.503 0-1.795.715-1.795 1.763v2.312h3.59l-.467 3.628h-3.123V24h6.126c.729 0 1.324-.594 1.324-1.326V1.326C24 .594 23.406 0 22.676 0z" />
                             </svg>
                         </a>

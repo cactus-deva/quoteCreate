@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import { getQuote } from "../api/api";
 import { Link } from "react-router-dom";
 import { DarkModeContext } from "../context/darkModeTheme";
-import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
+import { Loader } from "./Loader";
 
 export default function RandomQuotePage() {
   const { isDarkMode } = useContext(DarkModeContext);
@@ -26,32 +26,10 @@ export default function RandomQuotePage() {
     return () => clearInterval(interval);
   }, []);
 
-  if (quote.length === 0) {
-    return (
-      <div className="flex flex-col items-center justify-center">
-        {[...Array(1)].map((_, index) => {
-          return (
-            <div
-              key={index}
-              className="flex justify-center items-center h-full w-full py-[20px] rounded-md mt-[10%] p-[40px]"
-            >
-              <SkeletonTheme baseColor="lightblue" highlightColor="turquoise">
-                <Skeleton
-                  count={10}
-                  circle={30}
-                  height={30}
-                  containerClassName="flex-1"
-                />
-              </SkeletonTheme>
-            </div>
-          );
-        })}
-      </div>
-    );
-  }
+
   return (
     <div
-      className={`flex flex-col h-screen text-[13px] md:text-[20px]
+      className={`flex flex-col min-h-screen w-full text-sm md:text-lg
             ${
               isDarkMode
                 ? "bg-gradient-to-r from-black to-white"
@@ -60,23 +38,27 @@ export default function RandomQuotePage() {
     >
       <Link
         to="/"
-        className={`bg-[#C1E1C1] hover:bg-green-50 w-[150px] md:w-[250px] h-[30px] md:h-[50px] rounded-md p-2 m-3 text-black text-center
-                ${isDarkMode ? "bg-white" : "bg-[#A8D5BA]"}`}
+        className={`flex items-center justify-center hover:shadow-[0_0_15px_3px_rgba(72,187,120,0.8)] text-black font-semibold transition-all duration-300" bg-[#C1E1C1] hover:bg-green-100 w-[100px] md:w-[200px] h-[30px] md:h-[50px] rounded-md m-3 text-center`}
       >
-        Back to Home
+        BACK
       </Link>
-
       <div
-        className={`flex flex-col justify-center items-center mt-[10%] p-10 lg:m-20 xl:m-10`}
+        className={`flex flex-col justify-center items-center p-10 lg:m-40 xl:m-20`}
       >
-        <div className={`rounded-2xl bg-white bg-opacity-50 p-6 text-center`}>
-          <h1 className="text-[20px] md:text-4xl lg:text-5xl font-bold">
-            {quote.quote}
-          </h1>
-          <h3 className="text-gray-600 md:text-xl lg:text-2xl mt-5 text-[14px]">
-            {quote.author}
-          </h3>
-        </div>
+        {quote.length === 0 ? (
+          <div>
+             <Loader />
+          </div>
+        ) : (
+          <div className={`rounded-2xl bg-white bg-opacity-50 p-6 text-center`}>
+            <h1 className="text-md md:text-4xl lg:text-5xl font-bold">
+              {quote.quote}
+            </h1>
+            <h3 className="text-gray-600 md:text-xl lg:text-2xl mt-5 text-[14px]">
+              {quote.author}
+            </h3>
+          </div>
+        )}
       </div>
     </div>
   );
